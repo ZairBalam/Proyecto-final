@@ -4,15 +4,17 @@
     .encabezado{
         display: none;
     }
+    
 
     /* NAVBAR */
     .navbar{
         justify-content: space-between;
         padding: 15px 20px;
+        background-color: Var(--Verde);
     }
 
     .navbar img{
-        width: 180px;
+       display: none;
     }
 
     .nav-desktop{
@@ -23,26 +25,34 @@
         display: none;
     }
 
-    .burger{
+    .titulo-movil{
+        color: var(--Blanco);
+        font-size: 25px;
+        font-weight: bold;
         display: block;
+    }
+
+    .burger{
+    display: flex;
+    justify-content: flex-end;
     }
 
     .burger i{
         font-size: 30px;
-        color: var(--Azul);
+        color: var(--Blanco);
         cursor: pointer;
     }
 
+
     /* MENU MOVIL */
     .menu-movil{
-        position: fixed;
+        position: absolute;
         top: 0;
-        right: -100%;
-        width: 80%;
-        height: 100vh;
+        left: -100%;
+        width: 40%;
+        height: 573px;
         background-color: var(--Blanco);
-        z-index: 100;
-        padding: 30px;
+        z-index: 998;
         transition: 0.5s;
         display: flex;
         flex-direction: column;
@@ -50,12 +60,13 @@
     }
 
     .menu-movil.abierto{
-        right: 0;
+        left: 0;
     }
 
     .btn-cerrar{
-        font-size: 35px;
-        color: var(--Azul);
+        font-size: 25px;
+        color: var(--Gris);
+        margin-top: 65px;
         align-self: flex-end;
         cursor: pointer;
     }
@@ -63,23 +74,34 @@
     .nav-movil{
         display: flex;
         flex-direction: column;
-        gap: 25px;
     }
 
     .nav-movil a{
         text-decoration: none;
-        color: var(--Azul);
+        color: var(--Gris);
         font-size: 20px;
         font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10px;
+        border-bottom: 1px solid var(--Gris);
     }
+    .flecha_movil{
+      font-size: 16px;
+    }
+
 
     /* SLIDER */
     .slides{
-        height: 650px;
+        height: 600px;
+        position: relative;
     }
 
     .rslides img{
-        height: 650px;
+         height: 600px;
+    object-fit: cover;
+    object-position: 80% center; /* investigado = x y y*/
     }
 
     .contenido-slide{
@@ -91,8 +113,7 @@
     }
 
     .texto-slide{
-        max-width: 100%;
-        text-align: center;
+        text-align: left;
     }
 
     .texto-slide h2{
@@ -110,13 +131,11 @@
     }
 
     .botones-hero{
-        justify-content: center;
-        flex-wrap: wrap;
+        justify-content: start;
     }
 
     .btn-service{
-        padding: 15px 25px;
-        font-size: 14px;
+        display: none;
     }
 
     .btn-video i{
@@ -125,10 +144,19 @@
         font-size: 22px;
     }
 
-    /* FLECHAS */
     .slider-arrows{
-        padding: 0 15px;
-        font-size: 30px;
-    }
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 20px;
+        color: rgba(255, 255, 255, 0.7);
+        top: auto;
+        transform: none;
 
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+
+        z-index: 20;
+    }
 }
