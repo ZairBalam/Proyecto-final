@@ -33,7 +33,6 @@ $(function() {
     $("#cerrar_modal").click(function(){
         $("#modal").removeClass("mostrar");
     });
-
     
     // ACORDEÓN EN BOTÓN LEER MÁS
     $(".btn-leer-mas").click(function(e){
