@@ -23,19 +23,6 @@ $(function() {
         $('.rslides_nav.next').click();
     });
 
-    // BOLITAS SLIDER
-    $('.bolita1').click(function() {
-        $('.rslides_tabs li').eq(0).find('a').click();
-    });
-
-    $('.bolita2').click(function() {
-        $('.rslides_tabs li').eq(1).find('a').click();
-    });
-
-    $('.bolita3').click(function() {
-        $('.rslides_tabs li').eq(2).find('a').click();
-    });
-
     // ABRIR MODAL 
     $(".btn-service").click(function(e){
         e.preventDefault();
@@ -47,6 +34,7 @@ $(function() {
         $("#modal").removeClass("mostrar");
     });
 
+    
     // ACORDEÓN EN BOTÓN LEER MÁS
     $(".btn-leer-mas").click(function(e){
         e.preventDefault();
